@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   
   
-  <title>如何基于Redis实现分布式锁? | Hexo</title>
+  <title>如何基于Redis实现分布式锁? | Hushenghui&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="什么是分布式锁？ Java中，对于单机多线程，我们通常使用 ReentrantLock 类和 synchronized 关键字这类 JDK 自带的本地锁来控制多个线程对本地资源的访问。 线程访问共享资源是互斥的，同一时刻只有一个线程能够获取到本地锁来访问共享资源。 分布式系统，不同的服务&#x2F;客户端运行在独立的JVM进程中，无法通过使用本地锁来实现资源的互斥访问，于是分布式锁诞生了。 举例：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何基于Redis实现分布式锁?">
 <meta property="og:url" content="http://example.com/2024/10/18/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8ERedis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Hushenghui&#39;s Blog">
 <meta property="og:description" content="什么是分布式锁？ Java中，对于单机多线程，我们通常使用 ReentrantLock 类和 synchronized 关键字这类 JDK 自带的本地锁来控制多个线程对本地资源的访问。 线程访问共享资源是互斥的，同一时刻只有一个线程能够获取到本地锁来访问共享资源。 分布式系统，不同的服务&#x2F;客户端运行在独立的JVM进程中，无法通过使用本地锁来实现资源的互斥访问，于是分布式锁诞生了。 举例：">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-10-18T09:34:47.000Z">
@@ -18,7 +18,7 @@
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Hushenghui's Blog" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -43,7 +43,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Hushenghui&#39;s Blog</a>
       </h1>
       
     </div>
@@ -160,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/18/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8ERedis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" data-id="cm2ejbhel0002qkeg1z6g4bzd" data-title="如何基于Redis实现分布式锁?" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/18/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8ERedis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" data-id="cm372ny8q0002ggeg2bt158xy" data-title="如何基于Redis实现分布式锁?" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
