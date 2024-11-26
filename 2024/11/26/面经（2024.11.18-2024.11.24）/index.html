@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面经（2024.11.18-2024.11.24） | Hushenghui&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SpringAOP 如何实现？依赖于动态代理技术，动态代理是在运行时动态生成代理对象，而不是在编译时。 SpringAOP 支持两种动态代理  基于 JDK 的动态代理：使用 Proxy 类和 InvocationHandler 接口实现  这种方式需要代理的类实现一个或多个接口   基于 CGLIB 的动态代理：当被代理的类没有实现接口时，Spring 会使用 CGLIB 库生成一个被代理的子类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面经（2024.11.18-2024.11.24）">
+<meta property="og:url" content="http://example.com/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hushenghui&#39;s Blog">
+<meta property="og:description" content="SpringAOP 如何实现？依赖于动态代理技术，动态代理是在运行时动态生成代理对象，而不是在编译时。 SpringAOP 支持两种动态代理  基于 JDK 的动态代理：使用 Proxy 类和 InvocationHandler 接口实现  这种方式需要代理的类实现一个或多个接口   基于 CGLIB 的动态代理：当被代理的类没有实现接口时，Spring 会使用 CGLIB 库生成一个被代理的子类">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-26T07:15:51.000Z">
+<meta property="article:modified_time" content="2024-11-26T07:16:38.429Z">
+<meta property="article:author" content="Hushenghui">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hushenghui's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hushenghui&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面经（2024.11.18-2024.11.24）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2024-11-26T07:15:51.000Z" itemprop="datePublished">2024-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面经（2024.11.18-2024.11.24）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="SpringAOP-如何实现？"><a href="#SpringAOP-如何实现？" class="headerlink" title="SpringAOP 如何实现？"></a>SpringAOP 如何实现？</h3><p>依赖于动态代理技术，动态代理是在运行时动态生成代理对象，而不是在编译时。</p>
+<p>SpringAOP 支持两种动态代理</p>
+<ul>
+<li><p>基于 JDK 的动态代理：使用 Proxy 类和 InvocationHandler 接口实现</p>
+<ul>
+<li>这种方式需要代理的类实现一个或多个接口</li>
+</ul>
+</li>
+<li><p>基于 CGLIB 的动态代理：当被代理的类没有实现接口时，Spring 会使用 CGLIB 库生成一个被代理的子类作为代理</p>
+<ul>
+<li>Code Generation Library 是一个第三方代码生成库，通过继承方式实现代理</li>
+</ul>
+</li>
+</ul>
+<h3 id="AOP-实现常用注解？"><a href="#AOP-实现常用注解？" class="headerlink" title="AOP 实现常用注解？"></a>AOP 实现常用注解？</h3><ul>
+<li>@Aspect：用于定义切面，标注在切面类上。</li>
+<li>@Pointcut：定义切点，标注在方法上，用于指定连接点。</li>
+<li>@Before：在方法执行之前执行通知。</li>
+<li>@After：在方法执行之后执行通知。</li>
+<li>@Around：在方法执行前后都执行通知。</li>
+<li>@AfterReturning：在方法执行后返回结果后执行通知。</li>
+<li>@AfterThrowing：在方法抛出异常后执行通知。</li>
+<li>@Advice：通用的通知类型，可以替代@Before、@After等。</li>
+</ul>
+<h3 id="两者区别？"><a href="#两者区别？" class="headerlink" title="两者区别？"></a>两者区别？</h3><ul>
+<li><p>实现方式</p>
+<ul>
+<li>JDK 动态代理基于接口实现，要求被代理的类必须实现一个或多个接口，代理对象会实现这些接口并将方法调用委托给目标对象</li>
+<li>CGLIB 动态代理基于类实现，通过生成目标类的子类来实现代理，不要求目标类必须实现接口</li>
+</ul>
+</li>
+<li><p>性能差异</p>
+<ul>
+<li>JDK 动态代理创建代理对象开销较小，但每次方法都涉及反射，因此频繁调用的场景下性能略低</li>
+<li>CGLIB 动态代理生成代理类开销较大，但通过字节码操作减少反射开销，因此实际方法调用性能更高</li>
+</ul>
+</li>
+</ul>
+<p><strong>JDK动态代理</strong>：如果目标对象实现了接口，Spring默认使用JDK动态代理（首选）</p>
+<p><strong>CGLib代理</strong>：如果目标对象没有实现任何接口，Spring AOP 会自动使用 CGLib 动态代理</p>
+<ul>
+<li>在 Spring 配置中，也可以强制使用CGLib代理（通过设置<code>proxyTargetClass=true</code>​）</li>
+</ul>
+<p>‍</p>
+<h3 id="MySQL-事务"><a href="#MySQL-事务" class="headerlink" title="MySQL 事务"></a>MySQL 事务</h3><p>事务是什么？</p>
+<ul>
+<li>事务是逻辑上的一组操作，要么全部执行，要么全部不执行；</li>
+<li>事务分为数据库事务和分布式事务；</li>
+</ul>
+<p>数据库事务是什么？</p>
+<ul>
+<li>数据库事务是系统执行过程中的一个逻辑单位，由一个有限的数据库操作序列构成。这些操作通常包括增、删、改、查等。</li>
+</ul>
+<p>特性：数据库事务满足 ACID 四大特性，分别是：</p>
+<ul>
+<li>原子性：事务是最小的、不可分割的执行单位，事务中的操作要么全部执行，要么全部不执行；</li>
+<li>一致性：事务执行前后，数据保持一致，例如转账业务，无论事务是否成功，转账者和收款者的总额应是不变的；</li>
+<li>隔离性：并发的各个事务之间不会相互干扰，一个事务的中间状态对其它事务不可见；</li>
+<li>持久性：事务一旦提交，它对数据库的提交是永久性的，即使系统发生故障数据也不会丢失。</li>
+</ul>
+<p>只有保证了数据的持久性、原子性和隔离性后，一致性才会得到保障，A&#x2F;I&#x2F;D 是手段，D 是目的；</p>
+<p>应用场景：</p>
+<ul>
+<li>主要应用于单个数据库内多个数据表之间的数据一致性保障，如银行转账、库存管理等功能。</li>
+</ul>
+<p>并发事务带来的影响？</p>
+<ul>
+<li>更新丢失：多个事务同时选择同一行数据，都基于最初选定的值更新该行，由于每个事务都不清楚其它事务的存在，就会发生更新丢失的问题。最后提交的事务将覆盖之前其它事务所做的更新；</li>
+<li>脏读：事务 A 读取了事务 B 未提交的数据，而该数据随后被事务 B 回滚，导致事务 A 读取到无效的数据（脏数据）；</li>
+<li>不可重复读：同一事务中，多次读取同一行数据时，得到不同的结果。这是由于在事务执行期间，其它事务修改了该行数据导致；</li>
+<li>幻读：同一事务中，多次查询时，得到数据集的行数不一致（好像出现了幻觉）。这是由于在事务执行期间，其它事务插入或删除了某些数据导致。</li>
+</ul>
+<p>解决方案：</p>
+<p>为了解决这些并发事务带来的问题，MySQL提供了不同的事务隔离级别，这些事务隔离级别定义了事务之间如何相互隔离以及可以访问的数据，MySQL 的四种事务隔离级别如下：</p>
+<ul>
+<li>读未提交：允许事务 A 读取事务 B 未提交的数据，可能会导致脏读、不可重复读、幻读问题；</li>
+<li>读已提交：只允许事务 A 读取事务 B 已提交的数据，可以避免脏读问题，但可能出现不可重复读、幻读问题；</li>
+<li>可重复读（默认）：确保同一事务多次读取同一行数据得到的结果是一致的，可以避免脏读、不可重复问题，但可能出现幻读问题（在MySQL 的 innoDB 存储引擎中，通过 next-key-locking 机制可以避免幻读）；</li>
+<li>可序列化（可串行化）：事务的最高隔离级别，通过将事务完全序列化执行来避免脏读、不可重复读、幻读问题，但会显著降低并发性能。</li>
+</ul>
+<p>实际应用场景应根据具体业务来决定合适的事务隔离级别，以平衡并发性能和数据一致性；同时，还可以使用锁机制（如行级锁、表级锁、范围锁等）来进一步控制并发事务的访问。</p>
+<p>MySQL 的隔离级别实现原理？</p>
+<ul>
+<li>基于锁和 MVCC 机制共同实现，读未提交、读已提交、可重复读是基于 MVCC 技术实现，可串行化是通过加锁实现。</li>
+</ul>
+<p>MVCC 是什么？</p>
+<ul>
+<li>MVCC，多版本并发控制，是一种用于实现数据库并发访问控制的机制。它允许多个用户同时读写同一行数据，通过为每行数据维护多个版本来避免读写冲突，从而提高了数据库在高并发环境下的性能和响应数据。</li>
+</ul>
+<p>核心思想：</p>
+<ul>
+<li>在读写操作期间保存多个数据版本，以提供并发事务间的隔离性。这里的多版本是指某一条记录的多个版本同时存在，当事务需要读取数据时，它会读取对应版本的数据，而不是最新的数据，从而避免了使用传统锁机制来管理数据的并发访问；</li>
+</ul>
+<p>实现原理：</p>
+<ul>
+<li><p>Undo Log 是指在每个数据对象上维护的 Undo Log 记录链表，每张表都会有与之对应的 Undo Log 链，用于记录修改前的数据信息，以方便数据回滚。</p>
+<ul>
+<li>当执行 update 和 delete 操作时，会产生 Undo Log。这些 Undo Log 在数据回滚时需要用到，同时在快照读也需要用到，不能随便删除。</li>
+</ul>
+</li>
+<li><p>Read View 是用于管理事务之间数据可见性的一种机制。它在特定时刻为事务创建一个快照，该快照包含了该时刻所有未提交事务的事务标识符，及其它辅助信息。</p>
+<ul>
+<li>读已提交隔离级别下，每次快照读都会生成一个新的 Read View；而在可重复读隔离级别下，同一个事务会复用同一个 Read View；</li>
+</ul>
+</li>
+</ul>
+<p>面试版本：</p>
+<p>MVCC 多版本并发控制指的是维护同一个数据的多个版本，使读写没有冲突</p>
+<p>总共有三部分来实现MVCC</p>
+<ol>
+<li><p>隐藏字段：事务 id 和回滚指针；事务 id 是事务的唯一标识符，会在每一次的操作后进行自增。回滚指针则指向上一版本的事务记录地址，方便后续回滚；</p>
+</li>
+<li><p>undo log 回滚日志，存储老版本数据；</p>
+</li>
+<li><p>readView 快照读</p>
+<ul>
+<li><p>解决事务选择版本问题，且不同隔离级别的快照读是不同的。</p>
+<ul>
+<li>RC 是每一次执行快照读都生成 readView；</li>
+<li>RR 是第一次执行生成快照读，后续复用；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>undo log 和 redo log 区别：</p>
+<ul>
+<li><p>undo log：回滚日志，用与记录数据被修改前的信息，提供回滚数据和 MVCC 使用。</p>
+<ul>
+<li><p>Undo Log 是逻辑日志</p>
+<ul>
+<li>当 delete 一条记录时，undo log 会相反的记录一条 insert 记录；</li>
+<li>当 update 一条纪录时，它记录一条对应相反的 update 记录；</li>
+<li>当执行 rollback 时，可以从 undo log 中的逻辑记录读取到相应记录并进行回滚，实现事务的原子性和一致性；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>redo log：重做日志，记录事务提交时对数据的物理修改，用来实现事务的持久性，供数据恢复使用；</p>
+</li>
+</ul>
+<p>‍</p>
+<p>‍</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/" data-id="cm3y4jdub0002cseg5548af6f" data-title="面经（2024.11.18-2024.11.24）" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面经</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/">面经（2024.11.18-2024.11.24）</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F/">面经</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/07/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E6%BC%94%E7%A4%BA%E4%B8%8E%E4%BF%AE%E5%A4%8D%E5%BB%BA%E8%AE%AE/">常见漏洞演示与修复建议</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/18/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8ERedis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">如何基于Redis实现分布式锁?</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/12/pdd%E9%9D%A2%E7%BB%8F/">pdd面经</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Hushenghui<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
