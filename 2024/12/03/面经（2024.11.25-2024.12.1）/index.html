@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面经（2024.11.25-2024.12.1） | Hushenghui&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SpringCloud SpringCloud 是分布式微服务架构的一站式解决方案，是多种微服务架构落地技术的集合体，也被称为微服务全家桶；  核心组件与功能：  服务注册与发现 配置中心 负载均衡 服务熔断 服务调用  ‍ Redis 大 Key  大 Key 指的是存储在 Redis 中的键值对，其中键对应的 value 占用了较大的内存空间，或包含了大量的元素  ‍ 常见场景  缓存大数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面经（2024.11.25-2024.12.1）">
+<meta property="og:url" content="http://example.com/2024/12/03/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.25-2024.12.1%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hushenghui&#39;s Blog">
+<meta property="og:description" content="SpringCloud SpringCloud 是分布式微服务架构的一站式解决方案，是多种微服务架构落地技术的集合体，也被称为微服务全家桶；  核心组件与功能：  服务注册与发现 配置中心 负载均衡 服务熔断 服务调用  ‍ Redis 大 Key  大 Key 指的是存储在 Redis 中的键值对，其中键对应的 value 占用了较大的内存空间，或包含了大量的元素  ‍ 常见场景  缓存大数据">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-03T07:43:51.000Z">
+<meta property="article:modified_time" content="2024-12-03T07:43:36.610Z">
+<meta property="article:author" content="Hushenghui">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hushenghui's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hushenghui&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面经（2024.11.25-2024.12.1）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/12/03/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.25-2024.12.1%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2024-12-03T07:43:51.000Z" itemprop="datePublished">2024-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面经（2024.11.25-2024.12.1）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h3><ul>
+<li>SpringCloud 是分布式微服务架构的一站式解决方案，是多种微服务架构落地技术的集合体，也被称为微服务全家桶；</li>
+</ul>
+<p>核心组件与功能：</p>
+<ul>
+<li>服务注册与发现</li>
+<li>配置中心</li>
+<li>负载均衡</li>
+<li>服务熔断</li>
+<li>服务调用</li>
+</ul>
+<p>‍</p>
+<p>Redis 大 Key</p>
+<ul>
+<li>大 Key 指的是存储在 Redis 中的键值对，其中键对应的 value 占用了较大的内存空间，或包含了大量的元素</li>
+</ul>
+<p>‍</p>
+<p>常见场景</p>
+<ul>
+<li>缓存大数据</li>
+<li>明星或网红粉丝列表</li>
+<li>商品页所有信息</li>
+</ul>
+<p>‍</p>
+<p>排查大 Key</p>
+<p>BIGKEYS</p>
+<p>Redis 自带的 BIGKEYS 命令可以查询当前 Redis 中所有的 key 信息，对整个数据库中的键值对大小情况进行统计分析。</p>
+<p>它会查出每种数据结构的最大 Key，但不能根据某个容量进行筛选。</p>
+<p>‍</p>
+<p>MEMORY USAGE</p>
+<p>Redis 4.0+ 后推出了 MEMORY USAGE 命令，该命令可以返回指定 key 的内存使用情况，返回使用的内存的字节数。</p>
+<p>‍</p>
+<p>OBJECT</p>
+<ul>
+<li>OBJECT encoding 可以查看键值对象的编码类型，不同的编码类型可能暗示了键值的复杂程度和大小。</li>
+</ul>
+<p>例如：如果一个字符串类型的键采用了 raw 编码且长度很长，那么它可能是一个大 Key</p>
+<p>‍</p>
+<p>解决大 Key</p>
+<ol>
+<li><p>拆分大 Key</p>
+</li>
+<li><p>使用压缩算法</p>
+</li>
+<li><p>使用合适的数据结构和存储方式</p>
+</li>
+<li><p>设置合理的过期时间</p>
+<ol>
+<li>若大 Key 中的数据不是一直被需要的，可以通过设置过期时间让 Redis 在一定时间后自动删除，可以避免大 Key 长期占用内存，导致内存泄露。</li>
+</ol>
+</li>
+<li><p>加强监控和管理</p>
+<ol>
+<li>建立对 Redis 的监控系统，实时监测大 Key 的出现和内存使用情况。当发现大 Key 或内存占用过高时，及时发出预警（Redis Insights、Prometheus）</li>
+</ol>
+</li>
+</ol>
+<p>‍</p>
+<p><strong>大 Key 删除</strong></p>
+<p>删除大 Key 时注意：使用 UNLINK 命令代替 DEL 命令来删除大 Key——UNLINK 命令会立即返回，后台异步删除数据，避免阻塞。</p>
+<p>‍</p>
+<p>小结</p>
+<p>Redis 大 Key 问题会让 Redis 服务阻塞，无法响应其它命令，可能会导致客户端响应超时等问题。</p>
+<p>排查大 Key 问题可以使用 BIGKEYS、MEMORY USAGE、OBJECT 等命令；</p>
+<p>解决方案有：拆分大 Key、压缩数据、使用合适数据结构和存储方式、设置合理过期时间、以及加强监控和管理手段</p>
+<p>‍</p>
+<h3 id="HashMap-的遍历方式"><a href="#HashMap-的遍历方式" class="headerlink" title="HashMap 的遍历方式"></a>HashMap 的遍历方式</h3><p>遍历 key 和 value</p>
+<ul>
+<li>使用 map.entrySet()  最常用 最优解</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : map.entrySet()) &#123;</span><br><span class="line">    System.out.println(entry.getKey());</span><br><span class="line">    System.out.println(entry.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用迭代器 最不常用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">Iterator&lt;Map.Entry&lt;String, String&gt;&gt; iterator = map.entrySet().iterator();</span><br><span class="line"><span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">    System.out.println(iterator.next().getKey());</span><br><span class="line">    System.out.println(iterator.next().getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用 Stream API（Java 8） 适合大规模数据处理</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">map.entrySet().stream().forEach(entry -&gt;&#123;</span><br><span class="line">    System.out.println(entry.getKey());</span><br><span class="line">    System.out.println(entry.getValue());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用 forEach （Java8）最简洁</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">map.forEach((key, value) -&gt; &#123;</span><br><span class="line">    System.out.println(key);</span><br><span class="line">    System.out.println(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>遍历 key</p>
+<ul>
+<li>使用 map.keySet() ，也可以获取 value 效率较低 不推荐</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">      <span class="keyword">for</span> (String key : map.keySet()) &#123;</span><br><span class="line">          <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> map.get(key);</span><br><span class="line">          System.out.println(key + <span class="string">&quot;=&quot;</span> + value);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>遍历 value</p>
+<ul>
+<li>使用 map.values() 只需要遍历值使用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span> (String value : map.values()) &#123;</span><br><span class="line">    System.out.println(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>‍</p>
+<h3 id="String、StringBuffer、StringBuild-的区别"><a href="#String、StringBuffer、StringBuild-的区别" class="headerlink" title="String、StringBuffer、StringBuild 的区别"></a>String、StringBuffer、StringBuild 的区别</h3><ol>
+<li>可变性</li>
+</ol>
+<ul>
+<li><p>String 不可变，底层由 final 修饰，每次被创建出来，其实是在线程池中创建了一个对象，然后将指针引用过去。</p>
+<ul>
+<li>所谓修改 String 字符串实际上是在线程池创建了一个新的字符串对象，然后将引用指向新对象。</li>
+</ul>
+</li>
+<li><p>StringBuffer 和 StringBuilder 是可变的，可以通过其提供的 append 方法去对字符串进行修改</p>
+</li>
+</ul>
+<ol start="2">
+<li>线程安全性</li>
+</ol>
+<ul>
+<li>String 由于底层是不可变的，因此是<strong>线程安全</strong>的</li>
+<li>StringBuffer 由于其公开方法都是由 synchronzied 修饰的，意味着同一时刻只能有一个线程访问 StringBuffer 对象，因此是<strong>线程安全</strong>的</li>
+<li>StringBuilder 由于其方法没有被 synchronzied 修饰，<strong>线程不安全</strong>，多线程使用需要注意</li>
+</ul>
+<ol start="3">
+<li>性能</li>
+</ol>
+<ul>
+<li>String 由于每次修改都要创建新对象，因此在频繁修改字符串场景下性能较低</li>
+<li>StringBuffer 由于底层方法被 synchronzied 修饰，所以性能会比 StringBuilder 较低</li>
+<li>StringBuilder 单线程情况下，由于没有锁的开销，所以性能较高</li>
+</ul>
+<ol start="4">
+<li>使用场景</li>
+</ol>
+<ul>
+<li><p>String——适合字符串内容不经常修改</p>
+</li>
+<li><p>StringBuilder——适合单线程，且对字符串大量修改的场景</p>
+</li>
+<li><p>StringBuffer——适合多线程，且对字符串大量修改的场景</p>
+</li>
+</ul>
+<p>‍</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/12/03/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.25-2024.12.1%EF%BC%89/" data-id="cm485lnk3000408eghy9ih89l" data-title="面经（2024.11.25-2024.12.1）" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面经（2024.11.18-2024.11.24）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/12/03/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.25-2024.12.1%EF%BC%89/">面经（2024.11.25-2024.12.1）</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/26/%E9%9D%A2%E7%BB%8F%EF%BC%882024.11.18-2024.11.24%EF%BC%89/">面经（2024.11.18-2024.11.24）</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/07/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E6%BC%94%E7%A4%BA%E4%B8%8E%E4%BF%AE%E5%A4%8D%E5%BB%BA%E8%AE%AE/">常见漏洞演示与修复建议</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/18/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8ERedis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">如何基于Redis实现分布式锁?</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/12/pdd%E9%9D%A2%E7%BB%8F/">pdd面经</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Hushenghui<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
